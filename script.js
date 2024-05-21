@@ -18,12 +18,11 @@ function displayContacts() {
     document.getElementById('contacts').innerHTML = data;
 }
 function updateContact() {
-    const id = document.getElementById('id1').value;
+    const id = parseInt(document.getElementById('id1').value);
     const name = document.getElementById('name1').value;
     const phone = document.getElementById('phone1').value;
     const index = contacts.findIndex((item) => item.id == id);//index to be updated
-    contacts[index] = { id, name, phone }
-    alert("Contact updated Successfully");
+    contacts[index] = { id, name, phone };
     displayContacts();
 }
 function viewContact(id) {
@@ -36,7 +35,6 @@ function deleteContact(id) {
     // const index = contacts.findIndex((item) => item.id == id);
     // contacts.splice(index, 1);
     contacts = contacts.filter((item)=>item.id!==id); //ES6
-    alert("Contact Deleted Successfully");
     displayContacts();
 }
 function addContact() {
