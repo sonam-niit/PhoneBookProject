@@ -7,6 +7,7 @@ function displayContacts() {
                     <td>${contact.id}</td>
                     <td>${contact.name}</td>
                     <td>${contact.phone}</td>
+                    <td>${contact.phone}</td>
                     <td><button class='btn btn-danger' 
                     onclick='deleteContact(${contact.id})'>X</button>
                     
